@@ -1,4 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit'
+/**
+ * importing redux tools from redux toolkits
+ * @author:Sai Karthik
+ * @author:Siva Kumar
+ * 
+ * 
+ */
+
+
+
+import { createSlice } from '@reduxjs/toolkit';
+
+
+
+/**
+ * @description:This counterSlice is a reducer arguement with the initial state by creating reducer functions.
+ * For a slice name it automatcially generates action creators and types that respond to reducers and state.
+ * @
+ */
 
 export const counterSlice = createSlice({
     name: 'counter',
@@ -21,8 +39,8 @@ export const counterSlice = createSlice({
     }
 })
 
-// Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount,decrementByAmount } = counterSlice.actions
+
+export const { increment, decrement, incrementByAmount, decrementByAmount } = counterSlice.actions // Action creators are generated for each case reducer function
 
 
 export const decrementAsync = amount => dispatch => {
@@ -36,7 +54,7 @@ export const decrementAsync = amount => dispatch => {
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectCount = state => state.counter.value;
 
-// export default slice.reducer;
 
 
-export default counterSlice.reducer
+export default counterSlice.reducer;
+// export default slice.reducer
